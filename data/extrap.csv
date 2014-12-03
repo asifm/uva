@@ -1,0 +1,9 @@
+param,low,mid,up
+rev,1.2T,1.6T,2.0T
+exp,0.7T,0.9T,1.1T
+emp,1.7M,2.3M,2.9M
+ccap,1.6T,2.1T,2.7T
+rev-va,294B,395B,505B
+exp-va,208B,279B,356B
+emp-va,278K,371K,477K
+ccap-va,124B,167B,213B

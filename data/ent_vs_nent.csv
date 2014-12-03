@@ -1,0 +1,26 @@
+kind,name,freq_ent,freq_nent
+degree,Ph.D.,0.08,0.1
+degree,Master's,0.44,0.42
+degree,M.D.,0.05,0.04
+degree,J.D.,0.14,0.12
+field,Architecture,0.05,0.03
+field,Business,0.25,0.16
+field,Education,0.1,0.12
+field,Engineering,0.11,0.12
+field,Fine Arts,0.04,0.03
+field,Humanities,0.19,0.2
+field,Law,0.14,0.12
+field,Medicine/Healthcare,0.09,0.1
+field,Other,0.12,0.11
+field,Public Policy,0.02,0.02
+field,Sciences,0.11,0.13
+field,Social Sciences,0.19,0.21
+demog,Female,0.38,0.55
+demog,Under-represented Minorities,0.06,0.06
+demog,International,0.04,0.03
+demog,Out-of-state,0.45,0.4
+experience,Entrepreneurs among family and friends,0.67,0.53
+experience,Work experience in small businesses,0.72,0.54
+experience,"Work experience in professional, scientific, or technical fields",0.36,0.28
+experience,"Involvement with innovations, publications, patents, new products",0.51,0.35
+experience,Involvement with U.Va. entrepreneurship coursework or activities,0.16,0.08

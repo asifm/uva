@@ -14,31 +14,31 @@ grayish blue: 5b7f95
 dark brown: 7a6855
 grayish light brown: cccc99*/
 
-.extrap {
-  /*fill: #cccc99;*/
-  stroke: url(#gradient);
-  stroke-width: 6;
+.arc path {
+    stroke: #fff;
 }
+.extrap {
+    /*fill: #cccc99;*/
 
+    stroke: url(#gradient);
+    stroke-width: 6;
+}
 .outstate_line {
     stroke: #235281;
     stroke-opacity: 0.3;
     stroke-linecap: round;
     marker-start: url(../outstate_va.html#markerArrow);
 }
-
 .center {
-  margin: 0 auto;
+    margin: 0 auto;
 }
-
 .decade_small_bar {
-  fill: #5b7f95;
-  opacity: 0.3;
+    fill: #5b7f95;
+    opacity: 0.3;
 }
 .decade_bar {
-  fill: #5b7f95;
+    fill: #5b7f95;
 }
-
 .bar text {
     fill: white;
     font: 10px sans-serif;
@@ -50,8 +50,8 @@ grayish light brown: cccc99*/
 .nent {
     fill: #adc1cd;
 }
-
 /*~~~~~~~~~~~~~~~axis~~~~~~~~~~~~~~~~~~~*/
+
 .x.axis text {
     font-size: 13px;
 }
@@ -64,11 +64,9 @@ grayish light brown: cccc99*/
     stroke: #a2aaad;
     shape-rendering: crispEdges;
 }
-
 .x.axis path {
     display: none;
 }
-
 .axis-label {
     text-anchor: middle;
     font-size: 13px;
@@ -107,17 +105,14 @@ grayish light brown: cccc99*/
 }
 /*~~~~~~~~~~~~~~~map~~~~~~~~~~~~~~~~~~~*/
 
-.state,
-.country {
+.state, .country {
     fill: #adc1cd;
     opacity: 0.3;
     stroke: black;
     stroke-width: 0.5px;
     stroke-linejoin: round;
 }
-
-.state:hover,
-.country:hover {
+.state:hover, .country:hover {
     fill: white;
     opacity: .7;
 }
@@ -127,10 +122,9 @@ grayish light brown: cccc99*/
     stroke: black;
     stroke-width: .2px;
 }
-
 .map-container {
-  fill: #235281;
-  /*stroke: blue;
+    fill: #235281;
+    /*stroke: blue;
   stroke-width: 5;*/
 }
 /*~~~~~~~~~~~~~~~map~~~~~~~~~~~~~~~~~~~*/

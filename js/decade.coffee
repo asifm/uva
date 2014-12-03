@@ -119,18 +119,6 @@ d3.csv "../data/ventures_by_decade.csv", (data) ->
 
     renderBar
       data: decadeData
-      kind: "status"
-      w: 500
-      h: 150
-      targetId: "#status"
-      margin:
-        top: 20
-        right: 50
-        bottom: 40
-        left: 300
-
-    renderBar
-      data: decadeData
       kind: "ind"
       w: 700
       h: 250
@@ -140,7 +128,102 @@ d3.csv "../data/ventures_by_decade.csv", (data) ->
         right: 50
         bottom: 40
         left: 350
+
+    renderPie
+      data: decadeData
+      kind: "status"
+      w: 250
+      h: 250
+      targetId: "#status"
+      margin:
+        top: 10
+        right: 10
+        bottom: 40
+        left: 10
     return
+
+renderPie = (param) ->
+  d3.select param.targetId
+      .select "svg"
+      .remove()
+
+  data = filterData param.kind, param.data
+
+  width = param.w - param.margin.left - param.margin.right
+  height = param.h - param.margin.top - param.margin.bottom
+  radius = (Math.min width, height) / 2
+
+  color = d3.scale.ordinal()
+    .domain data.map (d) -> d.name
+    .range ["#adc1cd", "#cccc99", "#fff"]
+
+  arc = d3.svg.arc()
+    .outerRadius(radius - 10)
+    .innerRadius(40);
+
+  pie = d3.layout.pie()
+    .sort null
+    .value (d) -> d.freq
+
+  svg = d3.select param.targetId
+      .append "svg"
+      .attr "width", param.w
+      .attr "height", param.h
+
+  chart = svg.append "g"
+      .attr "transform", "translate(#{width / 2 + param.margin.left}, #{height / 2 + param.margin.top})"
+
+  g = chart.selectAll ".arc"
+      .data pie data
+      .enter()
+    .append "g"
+      .attr "class", "arc"
+
+  g.append "path"
+      .attr "d", arc
+      .style "fill", "white"
+      .transition()
+      .duration(400)
+      .style "fill", (d) -> color d.data.name
+
+  g.append "text"
+      .attr "transform", (d) -> "translate(#{arc.centroid d})"
+      # .attr "dy", ".3em"
+      .style "text-anchor", "middle"
+      .text (d) -> percentFormat d.data.freq if d.data.freq > .03
+      .classed "text-on-bar", true
+      .style "opacity", 0
+      .transition()
+      .duration(400)
+      .style "opacity", 1
+
+  legends = svg.selectAll "g .legends"
+    .data data
+    .enter()
+    .append "g"
+    .classed "legends", true
+    .attr "transform", (d, i) -> "translate(#{i * 60 + 30}, #{param.h - 25})"
+
+  legends
+    .append "rect"
+    .attr "x", 0
+    .attr "y", 0
+    .attr "width", 60
+    .attr "height", 20
+    .style "fill", (d) -> color d.name
+    .style "stroke", "black white"
+    .style "stroke-width", 1
+
+  legends
+    .append "text"
+    .attr "text-anchor", "middle"
+    .attr "x", 30
+    .attr "y", 10
+    .attr "dy", ".3em"
+    .classed "text-on-bar", true
+    .text (d) -> d.name
+
+  return
 
 renderBar = (param) ->
 

@@ -188,7 +188,6 @@ renderPie = (param) ->
 
   g.append "text"
       .attr "transform", (d) -> "translate(#{arc.centroid d})"
-      # .attr "dy", ".3em"
       .style "text-anchor", "middle"
       .text (d) -> percentFormat d.data.freq if d.data.freq > .03
       .classed "text-on-bar", true
@@ -202,7 +201,7 @@ renderPie = (param) ->
     .enter()
     .append "g"
     .classed "legends", true
-    .attr "transform", (d, i) -> "translate(#{i * 60 + 30}, #{param.h - 25})"
+    .attr "transform", (d, i) -> "translate(#{i * 60 + 35}, #{param.h - 25})"
 
   legends
     .append "rect"
@@ -211,9 +210,9 @@ renderPie = (param) ->
     .attr "width", 60
     .attr "height", 20
     .style "fill", (d) -> color d.name
-    .style "stroke", "black white"
-    .style "stroke-width", 1
-
+    .style "stroke-dasharray", "60, 20, 60, 20"
+    .style "stroke", "lightgray"
+    .style "stroke-width", "0.5"
   legends
     .append "text"
     .attr "text-anchor", "middle"
@@ -296,7 +295,7 @@ renderBar = (param) ->
       .text (d) -> commaFormat d.value
       .style "opacity", 0
       .transition()
-      .duration(600)
+      .duration(400)
       .style "opacity", 1
   return
 

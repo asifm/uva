@@ -257,11 +257,11 @@
       }
     }).classed("text-on-bar", true).style("opacity", 0).transition().duration(400).style("opacity", 1);
     legends = svg.selectAll("g .legends").data(data).enter().append("g").classed("legends", true).attr("transform", function(d, i) {
-      return "translate(" + (i * 60 + 30) + ", " + (param.h - 25) + ")";
+      return "translate(" + (i * 60 + 35) + ", " + (param.h - 25) + ")";
     });
     legends.append("rect").attr("x", 0).attr("y", 0).attr("width", 60).attr("height", 20).style("fill", function(d) {
       return color(d.name);
-    }).style("stroke", "black white").style("stroke-width", 1);
+    }).style("stroke-dasharray", "60, 20, 60, 20").style("stroke", "lightgray").style("stroke-width", "0.5");
     legends.append("text").attr("text-anchor", "middle").attr("x", 30).attr("y", 10).attr("dy", ".3em").classed("text-on-bar", true).text(function(d) {
       return d.name;
     });
@@ -304,7 +304,7 @@
       return y(d.name);
     }).attr("dy", y.rangeBand() / 2).text(function(d) {
       return commaFormat(d.value);
-    }).style("opacity", 0).transition().duration(600).style("opacity", 1);
+    }).style("opacity", 0).transition().duration(400).style("opacity", 1);
   };
 
   filterData = function(kind, data) {

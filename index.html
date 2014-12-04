@@ -209,20 +209,13 @@
     </div>
 
     <script>
-    $(".top").on("click", function(e) {
-        e.preventDefault();
-        // alert("triggered");
-    });
-
-    // $(".top").click(function() {
-    //     var position = $(document).scrollTop();
-
-    //     setTimeout(function() {
-    //         window.scrollTo(0, position);
-    //     }, 0);
-    // })
-
-
+    $(".top").click(function() {
+        var position = $(document).scrollTop();
+        setTimeout(function() {
+            window.scrollTo(0, position);
+        }, 0);
+        return false;
+    })
     </script>
 </body>
 

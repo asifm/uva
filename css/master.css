@@ -47,7 +47,10 @@ header {
 #nav1 {
   margin-bottom: 0;
 }
-header h1 {
+header .title {
+  font-family: 'roboto slab', serif;
+  color: #0D3268;
+  font-weight: normal;
   padding-top: 40px;
   /*letter-spacing: -0.06em;*/
   color: #5b7f95;
@@ -58,15 +61,12 @@ header h1 {
   padding-bottom: 0;
   /*font-weight: 100;*/
 }
-header h2 {
+header .title2 {
   color: #235281;
-  /*font-family: "Open Sans", sans-serif;*/
   font-family: "roboto slab";
   font-weight: normal;
   font-size: 35px;
   line-height: 1.25em;
-  /*margin-bottom: 0;*/
-  /*margin-top: 0;*/
 }
 body {
   font-family: 'open sans';
@@ -97,18 +97,10 @@ body {
 }
 h1 {
   font-family: 'roboto slab', serif !important;
-  color: #0D3268;
-  font-weight: normal !important;
+  color: #235281;
 }
-.bg-blue {
-  background-color: #0D3268;
-}
-.fg-blue {
-  color: #0D3268;
-}
-.fg-white {
-  color: white;
-}
-.bg-orange {
-  background-color: #F59A2C;
+
+blockquote {
+  font-size: 30px;
+  line-height: 1.3;
 }

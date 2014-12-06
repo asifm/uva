@@ -190,27 +190,27 @@
       renderBar({
         data: decadeData,
         kind: "legal",
-        w: 500,
+        w: 400,
         h: 260,
         targetId: "#legal",
         margin: {
-          top: 20,
-          right: 50,
-          bottom: 40,
+          top: 0,
+          right: 30,
+          bottom: 30,
           left: 160
         }
       });
       renderBar({
         data: decadeData,
         kind: "ind",
-        w: 700,
+        w: 600,
         h: 250,
         targetId: "#ind",
         margin: {
-          top: 20,
-          right: 50,
-          bottom: 40,
-          left: 350
+          top: 0,
+          right: 30,
+          bottom: 30,
+          left: 230
         }
       });
       renderPie({
@@ -220,10 +220,10 @@
         h: 250,
         targetId: "#status",
         margin: {
-          top: 10,
-          right: 10,
-          bottom: 40,
-          left: 10
+          top: 0,
+          right: 0,
+          bottom: 30,
+          left: 0
         }
       });
     };

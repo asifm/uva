@@ -1,7 +1,5 @@
 /*http://brand.darden.virginia.edu/color/
 
-"this is some dummy text"
-
 darden blue: #235281
 darden orange: #CF7800
 
@@ -51,11 +49,11 @@ header {
 }
 header .title {
   font-family: 'roboto slab', serif;
-  color: #0D3268;
+  color: #5b7f95;
+  color: black;
   font-weight: normal;
   padding-top: 40px;
   /*letter-spacing: -0.06em;*/
-  color: #5b7f95;
   /*text-shadow: -1px -1px white, 0 0 white;*/
   font-size: 65px;
   line-height: 1em;
@@ -86,23 +84,34 @@ body {
   font-size: 92px;
   float: left;
   padding: 20px;
-  /*height: 64px;*/
   font-family: "roboto slab", serif;
   color: white;
   background-color: #CF7800;
-
-  /* color: #0D3268; */
-
   margin-right: 10px;
   border-radius: 5px;
   line-height: 70px;
 }
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'roboto slab', serif !important;
   color: #235281;
+  font-weight: normal;
+  font-weight: bold;
 }
 
 blockquote {
-  font-size: 30px;
-  line-height: 1.3;
+  font-family: "times new roman";
+  font-family: "georgia";
+  font-size: 20px;
+}
+
+aside {
+  /*font-size: 13px;*/
+}
+
+.align-right {
+  text-align: right;
+}
+
+.nopadding {
+  padding: 0;
 }

@@ -163,8 +163,8 @@ d3.csv("../data/age.csv", type, function(error, data) {
     draw_chart_age({
         data: data,
         id: "#age",
-        w: 600,
-        h: 400,
+        w: 500,
+        h: 300,
         margin: {
             top: 20,
             right: 60,

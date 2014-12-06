@@ -1,52 +1,52 @@
 Top countries,
-USA," 8,184 "
-United Kingdom, 66 
-Canada, 33 
-China, 46 
-India, 24 
-France, 19 
-Germany, 17 
-Australia, 15 
-Spain, 14 
-Singapore, 12 
+USA,"8,184"
+United Kingdom,66
+China,46
+Canada,33
+India,24
+France,19
+Germany,17
+Australia,15
+Spain,14
+Singapore,12
 ,
-Top states,
-Virginia," 2,944 "
-California, 520 
-New York, 511 
-North Carolina, 357 
-Maryland, 336 
-Georgia, 309 
-Texas, 279 
-Pennsylvania, 268 
-Florida, 254 
-Massachusetts, 199 
+Top states,xyz
+Virginia,"2,944"
+California,520
+New York,511
+North Carolina,357
+Maryland,336
+Georgia,309
+Texas,279
+Pennsylvania,268
+Florida,254
+Massachusetts,199
 ,
 ,
-Top cities,
-"Charlottesville, VA", 675 
-"Richmond, VA", 415 
-"Washington, DC", 356 
-"New York, NY", 344 
-"Atlanta, GA", 203 
-"Arlington, VA", 135 
-"Fairfax, VA", 129 
-"Alexandria, VA", 122 
-"Boston, MA", 97 
-"San Francisco, CA", 91 
-"Los Angeles, CA", 87 
-"Chicago, IL", 82 
-"Charlotte, NC", 79 
-"Philadelphia, PA", 78 
-"Norfolk, VA", 77 
+Top U.S. Cities,
+"Charlottesville, VA",675
+"Richmond, VA",415
+"Washington, DC",356
+"New York, NY",344
+"Atlanta, GA",203
+"Arlington, VA",135
+"Fairfax, VA",129
+"Alexandria, VA",122
+"Boston, MA",97
+"San Francisco, CA",91
+"Los Angeles, CA",87
+"Chicago, IL",82
+"Charlotte, NC",79
+"Philadelphia, PA",78
+"Norfolk, VA",77
 ,
-Virginia cities,
-"Charlottesville, VA", 675 
-"Richmond, VA", 415 
-"Arlington, VA", 135 
-"Fairfax, VA", 129 
-"Alexandria, VA", 122 
-"Norfolk, VA", 77 
+Top Virginia Cities,
+"Charlottesville, VA",675
+"Richmond, VA",415
+"Arlington, VA",135
+"Fairfax, VA",129
+"Alexandria, VA",122
+"Norfolk, VA",77
 "Virginia Beach, VA",73
 "McLean, VA",60
 "Roanoke, VA",58

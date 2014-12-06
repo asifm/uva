@@ -1,5 +1,5 @@
 function draw_usmap() {
-  var width = 1000;
+  var width = 1050;
   var height = 500;
   var centered;
 
@@ -28,19 +28,8 @@ function draw_usmap() {
   svg.append("rect")
     .attr("width", width)
     .attr("height", height)
-    .attr("rx", "25")
-    .attr("ry", "25")
     .attr("class", "map-container")
     .on("click", clicked);
-
-  svg.append("text")
-    .attr("x", 0)
-    .attr("dx", "1em")
-    .attr("y", height)
-    .attr("dy", "-1em")
-    .text("Click on a circle to zoom in. Click elsewhere to zoom out.")
-    .style("fill", "#ccc")
-    .style("font-size", "14px")
 
   var g = svg.append("g")
 

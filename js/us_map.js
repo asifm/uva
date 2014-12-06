@@ -1,5 +1,5 @@
 function draw_usmap() {
-  var width = 960;
+  var width = 1050;
   var height = 500;
   var centered;
 
@@ -28,15 +28,6 @@ function draw_usmap() {
     .attr("height", height)
     .attr("class", "map-container")
     .on("click", clicked);
-
-  svg.append("text")
-    .attr("x", 0)
-    .attr("dx", "1em")
-    .attr("y", height)
-    .attr("dy", "-1em")
-    .text("Click on map to zoom.")
-    .style("fill", "gray")
-    .style("font-size", "14px")
 
   var g = svg.append("g")
 

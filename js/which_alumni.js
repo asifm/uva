@@ -119,7 +119,7 @@ function type(d) {
     return d;
 }
 
-d3.csv("../data/ent_vs_nent.csv", type, function(error, data) {
+d3.csv("data/ent_vs_nent.csv", type, function(error, data) {
 
     draw_chart_which_alumni({
         data: data,

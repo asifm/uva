@@ -159,7 +159,7 @@ function type(d) {
     return d;
 }
 
-d3.csv("../data/age.csv", type, function(error, data) {
+d3.csv("data/age.csv", type, function(error, data) {
     draw_chart_age({
         data: data,
         id: "#age",

@@ -6,7 +6,7 @@
 
   commaFormat = d3.format("0,000");
 
-  d3.csv("../data/ventures_by_decade.csv", function(data) {
+  d3.csv("data/ventures_by_decade.csv", function(data) {
     var barGroup, chart, data_1960s, data_1970s, data_1980s, data_1990s, data_2000s, data_2010s, decadeTotal, drawDecade, e, h, height, margin, svg, totalData, w, width, x, xAxis, y, yAxis;
     totalData = (function() {
       var _i, _len, _results;

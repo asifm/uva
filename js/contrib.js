@@ -109,7 +109,7 @@
       h: 600,
       domainScale: [0, 12000],
       rangeScale: [0, 30],
-      idTarget: "#emp",
+      idTarget: "#employment",
       contData: empData
     });
     // draw_contrib({

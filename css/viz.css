@@ -15,116 +15,114 @@ dark brown: 7a6855
 grayish light brown: cccc99*/
 
 .arc path {
-    stroke: #fff;
+  stroke: #fff;
 }
 .extrap {
-    /*fill: #cccc99;*/
-
-    stroke: url(#gradient);
-    stroke-width: 6;
+  stroke: url(#gradient);
+  stroke-width: 6;
 }
-.
-.center {
-    margin: 0 auto;
+. .center {
+  margin: 0 auto;
 }
 .decade_small_bar {
-    fill: #5b7f95;
-    opacity: 0.3;
+  fill: #5b7f95;
+  opacity: 0.3;
 }
 .decade_bar {
-    fill: #5b7f95;
+  fill: #5b7f95;
 }
 .bar text {
-    fill: white;
-    font: 10px sans-serif;
-    /*text-anchor: middle;*/
+  fill: white;
+  font: 10px sans-serif;
+  /*text-anchor: middle;*/
 }
 .ent {
-    fill: #235281;
+  fill: #235281;
+  stroke: #235281;
 }
 .nent {
-    fill: #adc1cd;
+  fill: #adc1cd;
+  stroke: #adc1cd;
 }
 /*~~~~~~~~~~~~~~~axis~~~~~~~~~~~~~~~~~~~*/
 
 .x.axis text {
-    font-size: 13px;
+  font-size: 13px;
 }
 .y.axis text {
-    font-size: 13px;
+  font-size: 13px;
 }
 .axis path, .axis line {
-    fill: none;
-    stroke-width: 1px;
-    stroke: #a2aaad;
-    shape-rendering: crispEdges;
+  fill: none;
+  stroke-width: 1px;
+  stroke: #a2aaad;
+  shape-rendering: crispEdges;
 }
-.x.axis path {
-    display: none;
+.y.axis path, .x.axis path {
+  display: none;
 }
 .axis-label {
-    text-anchor: middle;
-    font-size: 13px;
+  text-anchor: middle;
+  font-size: 13px;
 }
-
 .text-on-area, .text-on-bar {
-    font-size: 10px;
-    color: black;
+  font-size: 10px;
+  color: black;
 }
 .area {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 .ent-area {
-    fill: #adc1cd;
+  fill: #adc1cd;
 }
 .nent-area {
-    fill: #cccc99;
+  fill: #cccc99;
 }
 /*~~~~~~~~~~~~~~~map~~~~~~~~~~~~~~~~~~~*/
 
 .map-tooltip {
-    line-height: 1;
-    font-size: 11px;
-    padding: 8px;
-    background: #F1EEDE;
-    color: black;
-    border-radius: 2px;
+  line-height: 1;
+  font-size: 11px;
+  padding: 8px;
+  background: #F1EEDE;
+  color: black;
+  border-radius: 2px;
 }
-outstate_line {
-    stroke: #235281;
-    stroke-opacity: 0.3;
-    stroke-linecap: round;
-    marker-start: url(../index.html#markerArrow);
+.outstate_line {
+  stroke: #235281;
+  stroke-opacity: 0.3;
+  stroke-linecap: round;
+  marker-start: url(../index.html#markerArrow);
 }
-
-
 .state, .country {
-    fill: #adc1cd;
-    opacity: 0.3;
-    stroke: black;
-    stroke-width: 0.5px;
-    stroke-linejoin: round;
+  fill: #adc1cd;
+  opacity: 0.3;
+  stroke: black;
+  stroke-width: 0.5px;
+  stroke-linejoin: round;
 }
 .country:hover {
-    fill: white;
-    opacity: .7;
+  fill: white;
+  opacity: .7;
 }
 .map-circle {
-    fill: orange;
-    opacity: 0.6;
-    stroke: black;
-    stroke-width: .2px;
+  fill: orange;
+  opacity: 0.6;
+  stroke: black;
+  stroke-width: .2px;
 }
 .map-container {
-    fill: #235281;
-    /*stroke: blue;
-  stroke-width: 5;*/
+  fill: #235281;
+}
+.line-inside-chart {
+  stroke-width: 3;
+  stroke-dasharray: 3, 3;
+  stroke-linecap: round;
 }
 
 .line {
-    fill: none;
-    stroke: steelblue;
-    stroke-width: 2px;
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2;
 }
-
 /*~~~~~~~~~~~~~~~map ends~~~~~~~~~~~~~~~~~~~*/

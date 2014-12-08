@@ -123,7 +123,7 @@ d3.csv("data/ent_vs_nent.csv", type, function(error, data) {
 
     draw_chart_which_alumni({
         data: data,
-        id: "#exp",
+        id: "#experience",
         kind: "experience",
         w: 960,
         margin: {

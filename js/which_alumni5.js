@@ -111,7 +111,7 @@ d3.csv("data/ent_vs_nent.csv", type, function(error, data) {
     w: 960,
     margin: {
       top: 0,
-      right: 00,
+      right: 0,
       bottom: 20,
       left: 0
     }

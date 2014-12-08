@@ -3,12 +3,12 @@ var tooltip = d3.select("body")
     .attr("class", "map-tooltip")
     .style("position", "absolute")
 
-var w = 600,
+var w = 800,
     h = 600;
 
 var va_lon_lat = [-78.169968, 37.769335];
 
-var svg = d3.select("body")
+var svg = d3.select("#outstate")
     .append("svg")
     .attr("width", w)
     .attr("height", h)
@@ -23,13 +23,12 @@ var cScale = d3.scale.linear()
 
 var projection = d3.geo.albersUsa()
     .translate([w / 2, h / 2])
-    .scale([800]);
+    .scale([1000]);
 
 var path = d3.geo.path()
     .projection(projection);
 
 d3.json("data/us-states.json", function(json) {
-
 
     d3.csv("data/outstate_va.csv", function(data) {
         svg.selectAll("line")

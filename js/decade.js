@@ -106,27 +106,25 @@
       }
       return _results;
     })();
-    decadeTotal = [
-      {
-        decade: '1960s',
-        value: 119
-      }, {
-        decade: '1970s',
-        value: 494
-      }, {
-        decade: '1980s',
-        value: 1310
-      }, {
-        decade: '1990s',
-        value: 2147
-      }, {
-        decade: '2000s',
-        value: 3341
-      }, {
-        decade: '2010s',
-        value: 1233
-      }
-    ];
+    decadeTotal = [{
+      decade: '1960s',
+      value: 119
+    }, {
+      decade: '1970s',
+      value: 494
+    }, {
+      decade: '1980s',
+      value: 1310
+    }, {
+      decade: '1990s',
+      value: 2147
+    }, {
+      decade: '2000s',
+      value: 3341
+    }, {
+      decade: '2010s',
+      value: 1233
+    }];
     margin = {
       top: 30,
       right: 0,
@@ -158,7 +156,9 @@
     }).on("mouseleave", function() {
       return d3.select(this).transition().style("opacity", 1);
     }).on("click", function() {
-      return drawDecade(d3.select(this).datum().decade);
+      var decade = d3.select(this).datum().decade;
+      drawDecade(decade);
+      d3.select("#decade-caption").html("Ventures Founded in " + decade)
     });
     barGroup.append("text").attr("class", "text-on-bar").attr("x", function(d) {
       return x(d.decade);
@@ -167,8 +167,15 @@
     }).attr("dy", "-1.2em").text(function(d) {
       return commaFormat(d.value);
     }).style("opacity", 1);
-    return drawDecade = function(decade) {
+
+    drawDecade = function(decade) {
       var decadeData;
+      if (decade === 'total') {
+        decadeData = totalData;
+        d3.select("#show-total").classed("btn-disabled", true)
+      } else {
+        d3.select("#show-total").classed("btn-disabled", false)
+      }
       if (decade === '1960s') {
         decadeData = data_1960s;
       }
@@ -191,7 +198,7 @@
         data: decadeData,
         kind: "legal",
         w: 400,
-        h: 260,
+        h: 200,
         targetId: "#legal",
         margin: {
           top: 0,
@@ -203,8 +210,8 @@
       renderBar({
         data: decadeData,
         kind: "ind",
-        w: 600,
-        h: 250,
+        w: 400,
+        h: 200,
         targetId: "#ind",
         margin: {
           top: 0,
@@ -216,8 +223,8 @@
       renderPie({
         data: decadeData,
         kind: "status",
-        w: 250,
-        h: 250,
+        w: 200,
+        h: 200,
         targetId: "#status",
         margin: {
           top: 0,
@@ -227,6 +234,13 @@
         }
       });
     };
+    drawDecade('total');
+    d3.select("#show-total").classed("btn-disabled", true)
+    d3.select("#show-total").on("click", function() {
+      drawDecade('total');
+      d3.select("#decade-caption").html("All Ventures");
+      d3.select("#show-total").classed("btn-disabled", true)
+    })
   });
 
   renderPie = function(param) {
@@ -239,7 +253,7 @@
     color = d3.scale.ordinal().domain(data.map(function(d) {
       return d.name;
     })).range(["#adc1cd", "#cccc99", "#fff"]);
-    arc = d3.svg.arc().outerRadius(radius - 10).innerRadius(40);
+    arc = d3.svg.arc().outerRadius(radius - 10).innerRadius(30);
     pie = d3.layout.pie().sort(null).value(function(d) {
       return d.freq;
     });
@@ -257,7 +271,7 @@
       }
     }).classed("text-on-bar", true).style("opacity", 0).transition().duration(400).style("opacity", 1);
     legends = svg.selectAll("g .legends").data(data).enter().append("g").classed("legends", true).attr("transform", function(d, i) {
-      return "translate(" + (i * 60 + 35) + ", " + (param.h - 25) + ")";
+      return "translate(" + (i * 60 + 7) + ", " + (param.h - 25) + ")";
     });
     legends.append("rect").attr("x", 0).attr("y", 0).attr("width", 60).attr("height", 20).style("fill", function(d) {
       return color(d.name);

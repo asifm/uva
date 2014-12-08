@@ -178,12 +178,24 @@ d3.csv("data/ent_vs_nent.csv", type, function(error, data) {
       left: 200
     }
   });
-});
 
-d3.select("#exp-legend")
-  .append("line")
-      .classed("line-inside-chart", true)
-      .attr("x1", "0")
-      .attr("y1", "0")
-      .attr("x2", "50")
-      .attr("y2", "0")
+  legend_data = ["% of Entrepreneurial Alumni", "% of Non-entrepreneurial Alumni"]
+  legendColor = d3.scale.ordinal().domain(legend_data).range(["#235281", "#adc1cd"])
+
+  legends = d3.select("#which-alum-legends").append("svg").attr("width", 600).attr("height", 30).selectAll("g .legends").data(legend_data).enter().append("g").classed("legends", true).attr("transform", function(d, i) {
+    return "translate(" + (i * 300) + ", " + "0" + ")";
+  });
+  legends.append("rect").attr("x", 0).attr("y", 0).attr("width", 300).attr("height", 30).style("fill", function(d) {
+    return legendColor(d);
+  });
+  legends.append("text").attr("text-anchor", "middle").attr("x", 150).attr("y", 15).attr("dy", ".3em")
+    .style("fill", function (d, i) {
+      if (i === 1) {
+        return "black";
+      }
+      return"white";
+    })
+    .text(function(d) {
+      return d;
+    });
+});

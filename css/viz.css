@@ -105,6 +105,10 @@ grayish light brown: cccc99*/
   fill: white;
   opacity: .7;
 }
+
+.oustate:hover {
+  opacity: .7;
+}
 .map-circle {
   fill: orange;
   opacity: 0.6;

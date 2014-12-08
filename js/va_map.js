@@ -1,4 +1,4 @@
-function draw_usmap() {
+function draw_vamap() {
   var width = 1050;
   var height = 500;
   var centered;
@@ -16,7 +16,6 @@ function draw_usmap() {
     .translate([width / 2, height / 2])
     .scale(6500)
     .center([-79.4, 37.9680]);
-
 
   var path = d3.geo.path()
     .projection(projection);
@@ -115,6 +114,26 @@ function draw_usmap() {
       .style("stroke-width", 1.5 / k + "px");
 
   }
+
+    function zoom_out() {
+    var x, y, k;
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+
+    g.selectAll("path")
+      .classed("active", centered && function(d) {
+        return d === centered;
+      });
+
+    g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+  };
+  d3.select("#zoom-text-va").html("Click on a circle to zoom in. Hover for details. &nbsp;&nbsp;");
+  d3.select("#zoom-out-va").on("click", zoom_out);
 }
 
 function type(d) {
@@ -124,4 +143,4 @@ function type(d) {
   return d;
 }
 
-draw_usmap();
+draw_vamap();

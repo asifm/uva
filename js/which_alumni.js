@@ -157,7 +157,7 @@ d3.csv("data/ent_vs_nent.csv", type, function(error, data) {
     data: data,
     id: "#degree",
     kind: "degree",
-    w: 400,
+    w: 500,
     margin: {
       top: 0,
       right: 30,

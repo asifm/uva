@@ -92,7 +92,7 @@ grayish light brown: cccc99*/
   stroke: #235281;
   stroke-opacity: 0.3;
   stroke-linecap: round;
-  marker-start: url(../index.html#markerArrow);
+  marker-start: url(#markerArrow);
 }
 .state, .country {
   fill: #adc1cd;

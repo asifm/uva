@@ -295,12 +295,8 @@
     y = d3.scale.ordinal().domain(data.map(function(d) {
       return d.name;
     })).rangeRoundBands([0, height], .1);
-    xAxis = d3.svg.axis().scale(x).orient("bottom").tickFormat(percentFormat);
-    if (param.kind === "status") {
-      xAxis.ticks(3);
-    } else {
-      xAxis.ticks(6);
-    }
+    xAxis = d3.svg.axis().scale(x).orient("bottom").tickFormat(percentFormat).ticks(3);
+
     yAxis = d3.svg.axis().scale(y).orient("left");
     svg = d3.select(param.targetId).append("svg").attr("width", width + param.margin.left + param.margin.right).attr("height", height + param.margin.top + param.margin.bottom);
     chart = svg.append("g").attr("transform", "translate(" + param.margin.left + ", " + param.margin.top + ")");

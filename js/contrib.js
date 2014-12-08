@@ -109,17 +109,17 @@
       h: 600,
       domainScale: [0, 12000],
       rangeScale: [0, 30],
-      idTarget: "#employment",
+      idTarget: "#emp-dist",
       contData: empData
     });
-    // draw_contrib({
-    //   w: 600,
-    //   h: 600,
-    //   domainScale: [0, 15000000000],
-    //   rangeScale: [0, 50],
-    //   idTarget: "#rev",
-    //   contData: revData
-    // });
+    draw_contrib({
+      w: 600,
+      h: 600,
+      domainScale: [0, 15000000000],
+      rangeScale: [0, 50],
+      idTarget: "#rev-dist",
+      contData: revData
+    });
     // draw_contrib({
     //   w: 600,
     //   h: 600,
@@ -128,14 +128,14 @@
     //   idTarget: "#exp",
     //   contData: expData
     // });
-    // draw_contrib({
-    //   w: 600,
-    //   h: 600,
-    //   domainScale: [0, 30000000000],
-    //   rangeScale: [0, 70],
-    //   idTarget: "#cap",
-    //   contData: capData
-    // });
+    draw_contrib({
+      w: 400,
+      h: 400,
+      domainScale: [0, 30000000000],
+      rangeScale: [0, 60],
+      idTarget: "#cap-dist",
+      contData: capData
+    });
   });
 
 }).call(this);

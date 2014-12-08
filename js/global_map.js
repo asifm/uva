@@ -1,4 +1,4 @@
-function draw_globe() {
+function draw_world() {
   var width = 1050;
   var height = 500;
   var centered;
@@ -99,33 +99,54 @@ function draw_globe() {
   })
 
 
-function clicked(d) {
-  var x, y, k;
+  function clicked(d) {
+    var x, y, k;
 
-  if (d && centered !== d) {
-    var centroid = path.centroid(d);
-    x = centroid[0];
-    y = centroid[1];
-    k = 4;
-    centered = d;
-  } else {
+    if (d && centered !== d) {
+      var centroid = path.centroid(d);
+      x = centroid[0];
+      y = centroid[1];
+      k = 4;
+      centered = d;
+    } else {
+      x = width / 2;
+      y = height / 2;
+      k = 1;
+      centered = null;
+    }
+
+    g.selectAll("path")
+      .classed("active", centered && function(d) {
+        return d === centered;
+      });
+
+    g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+  }
+
+    function zoom_out() {
+    var x, y, k;
     x = width / 2;
     y = height / 2;
     k = 1;
     centered = null;
-  }
 
-  g.selectAll("path")
-    .classed("active", centered && function(d) {
-      return d === centered;
-    });
+    g.selectAll("path")
+      .classed("active", centered && function(d) {
+        return d === centered;
+      });
 
-  g.transition()
-    .duration(750)
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-    .style("stroke-width", 1.5 / k + "px");
+    g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+  };
+  d3.select("#zoom-text-world").html("Click on map to zoom in. Hover for details. &nbsp;&nbsp;");
+  d3.select("#zoom-out-world").on("click", zoom_out);
+
 }
-}
 
 
-draw_globe();
+draw_world();

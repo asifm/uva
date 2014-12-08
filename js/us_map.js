@@ -21,13 +21,13 @@ function draw_usmap() {
 
   var svg = d3.select("#us-map").append("svg")
     .attr("width", width)
-    .attr("height", height);
+    .attr("height", height)
 
   svg.append("rect")
     .attr("width", width)
     .attr("height", height)
     .attr("class", "map-container")
-    .on("click", clicked);
+    .on("click", clicked)
 
   var g = svg.append("g")
 
@@ -70,21 +70,18 @@ function draw_usmap() {
             .style("opacity", 1)
           d3.select(this).style("fill", "white")
         })
-
       .on("mouseleave", function(d) {
           tooltip
             .style("opacity", 0);
           d3.select(this).style("fill", "orange")
         })
         .on("click", clicked)
-
     })
   })
 
 
   function clicked(d) {
     var x, y, k;
-    // console.log(d)
     if (d && centered !== d) {
       if (d.type == "Feature") {
         var centroid = path.centroid(d);
@@ -114,6 +111,26 @@ function draw_usmap() {
       .style("stroke-width", 1.5 / k + "px");
 
   }
+function zoom_out() {
+  var x, y, k;
+  x = width / 2;
+  y = height / 2;
+  k = 1;
+  centered = null;
+
+  g.selectAll("path")
+    .classed("active", centered && function(d) {
+      return d === centered;
+    });
+
+  g.transition()
+    .duration(750)
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+    .style("stroke-width", 1.5 / k + "px");
+};
+d3.select("#zoom-text-us").html("Click on map to zoom in. Hover for details. &nbsp;&nbsp;");
+d3.select("#zoom-out-us").on("click", zoom_out);
+
 }
 
 function type(d) {
@@ -124,3 +141,5 @@ function type(d) {
 }
 
 draw_usmap();
+
+

@@ -111,7 +111,7 @@
       <h1 class="h1" id="where">Where Do U.Va. Alumni Create Ventures</h1>
 
 
-      <nav class="nav-tabs" data-tools="tabs" data-equals="false">
+      <nav class="nav-tabs" data-tools="tabs" data-equals="false" id="map-tabs">
         <ul>
           <li class="active"><a href="#us-map" class="top">In the U.S.</a>
           </li>
@@ -121,10 +121,14 @@
           </li>
         </ul>
       </nav>
-      <div class="unit-100" id="us-map"></div>
-      <div class="unit-100" id="world-map"></div>
-      <div class="unit-100" id="va-map"></div>
-      <div id="zomm-text"></div> <span id="zoom-out" class="label label-outline">Zoom Out</span>
+      <div class="unit-100 end" id="us-map"></div>
+      <div class="unit-100 end" id="world-map"></div>
+      <div class="unit-100 end" id="va-map"></div>
+      <div style="text-align:center">
+        Click on map or a circle to zoom in. Click again to zoom out. Hover for details.
+        <br><br>
+      </div>
+
       <div class="units-row">
         <div class="unit-25">
 
@@ -492,9 +496,6 @@
         window.scrollTo(0, position);
       }, 0);
     })
-    //   $("a").click(function(evt) {
-    //     evt.preventDefault();
-    // });
   </script>
 </body>
 

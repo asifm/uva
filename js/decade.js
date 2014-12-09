@@ -158,7 +158,7 @@
     }).on("click", function() {
       var decade = d3.select(this).datum().decade;
       drawDecade(decade);
-      d3.select("#decade-caption").html("Ventures Founded in " + decade)
+      d3.select("#decade-caption").html("Ventures Founded in " + decade);
     });
     barGroup.append("text").attr("class", "text-on-bar").attr("x", function(d) {
       return x(d.decade);
@@ -172,9 +172,6 @@
       var decadeData;
       if (decade === 'total') {
         decadeData = totalData;
-        d3.select("#show-total").classed("btn-disabled", true)
-      } else {
-        d3.select("#show-total").classed("btn-disabled", false)
       }
       if (decade === '1960s') {
         decadeData = data_1960s;
@@ -235,11 +232,10 @@
       });
     };
     drawDecade('total');
-    d3.select("#show-total").classed("btn-disabled", true)
+
     d3.select("#show-total").on("click", function() {
       drawDecade('total');
       d3.select("#decade-caption").html("All Ventures");
-      d3.select("#show-total").classed("btn-disabled", true)
     })
   });
 

@@ -49,7 +49,7 @@
 
   h = 40;
 
-  vMargin = 30;
+  vMargin = 40;
 
   hMargin = 50;
 
@@ -73,11 +73,11 @@
 
     group.append("text").attr("text-anchor", "middle").attr("x", 0).attr("x", "2em").attr("y", h / 2).attr("dy", ".5em").text(data[kind].lo);
 
-    group.append("text").attr("text-anchor", "middle").attr("x", 0).attr("x", "2em").attr("y", h).attr("dy", "1em").text("Low estimate");
+    group.append("text").attr("text-anchor", "middle").attr("x", 0).attr("x", "2em").attr("y", h).attr("dy", ".8em").text("Low estimate");
 
     group.append("text").attr("text-anchor", "middle").attr("x", w).attr("dx", "-2em").attr("y", h / 2).attr("dy", ".5em").text(data[kind].hi);
 
-    group.append("text").attr("text-anchor", "middle").attr("x", w).attr("dx", "-2em").attr("y", h).attr("dy", "1em").text("High estimate");
+    group.append("text").attr("text-anchor", "middle").attr("x", w).attr("dx", "-2em").attr("y", h).attr("dy", ".8em").text("High estimate");
 
     group.append("text").attr("text-anchor", "middle").attr("font-family", "open sans").attr("font-size", "30px").attr("font-variant", "small-caps").attr("x", w / 2).attr("y", h / 2).attr("dy", ".4em").text(data[kind].mi);
   }

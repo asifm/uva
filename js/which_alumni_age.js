@@ -22,10 +22,6 @@ function draw_chart_age(param) {
         .orient("left")
         .ticks(4);
 
-    // data.sort(function(a, b) {
-    //     return a.age - b.age;
-    // })
-
     var svg = d3.select(param.id)
         .append("svg")
         .attr("width", width + param.margin.left + param.margin.right)

@@ -15,15 +15,6 @@
   <link rel="stylesheet" href="css/master.css" />
   <link rel="stylesheet" href="css/viz.css" />
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-  <script src="js/kube.min.js"></script>
-
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="http://d3js.org/d3.geo.projection.v0.min.js" charset="utf-8"></script>
-  <!-- TODO check if queue and topoojson used anywhere -->
-  <script src="http://d3js.org/queue.v1.min.js"></script>
-  <script src="http://d3js.org/topojson.v1.min.js"></script>
-
 </head>
 
 <body>
@@ -96,24 +87,8 @@
           </nav>
 
           <!-- social media share buttons start -->
-          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Survey shows the economic impact of #UVA alumni entrepreneurs" data-via="BattenInstitute" data-size="small">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<br>
-<div class="fb-share-button" data-href="https://web3.darden.virginia.edu/uva-alumni" data-layout="button_count"></div>
-<br><br>
-<script src="//platform.linkedin.com/in.js" type="text/javascript">
-  lang: en_US
-</script>
-<script type="IN/Share" data-url="http://web3.darden.virginia.edu/uva-alumni" data-counter="right"></script>
-<br><br>
-<a href="mailto:?subject=Economic impact of entrepreneurial alumni&amp;body=http://web3.darden.virginia.edu/uva-alumni" title="Share by Email"><i class="fa fa-envelope-o fa-2x"></i></a>
-<br>
-<br>
-<br>
-<!-- social media share button ends -->
-<hr>
-<br>
-<br>
+          <!-- twitter, linkedin, facebook, google plus, email -->
+          <!-- social media share button ends -->
           <p>We used extrapolation methods only in the last section (on contribution to the economy). All other numbers are directly calculated from the survey responses.</p>
         </div>
 
@@ -131,7 +106,7 @@
 
         </div>
       </div>
-      <h1 class="h1" id="where"><i class="fa fa-asterisk fa-spin"></i> Where Do U.Va. Alumni Create Ventures?</h1>
+      <h1 class="h1" id="where">Where Do U.Va. Alumni Create Ventures?</h1>
 
 
       <nav class="nav-tabs" data-tools="tabs" data-equals="false" id="map-tabs">
@@ -148,8 +123,7 @@
       <div class="unit-100 end" id="world-map"></div>
       <div class="unit-100 end" id="va-map"></div>
       <div style="text-align:center">
-        <i class="fa fa-hand-o-up"></i> Hover for details. Click on map or a circle to zoom in. To zoom out, click on the same location twice.
-        <br>
+        <p class="chart-instruction"><i class="fa fa-asterisk fa-spin fa-2x"></i> Hover on a circle for details. Click on map or a circle to zoom in. To zoom out, click on the same location twice.</p>
         <br>
       </div>
 
@@ -158,7 +132,7 @@
 
           <table class="table-flat table-stripped">
             <tr>
-              <th>Top Countries</th>
+              <th class="table-header">Top Countries</th>
               <th></th>
             </tr>
             <tr>
@@ -206,7 +180,7 @@
         <div class="unit-25">
           <table class="table-flat table-stripped">
             <tr>
-              <th>Top States</th>
+              <th class="table-header">Top States</th>
               <!--   <th></th> -->
             </tr>
             <tr>
@@ -254,7 +228,7 @@
         <div class="unit-25">
           <table class="table-flat table-stripped">
             <tr>
-              <th>Top U.S. Cities</th>
+              <th class="table-header">Top U.S. Cities</th>
               <th>&nbsp;</th>
             </tr>
             <tr>
@@ -302,7 +276,7 @@
         <div class="unit-25">
           <table class="table-flat table-stripped">
             <tr>
-              <th>Top Virginia Cities</th>
+              <th class="table-header">Top Virginia Cities</th>
             </tr>
             <tr>
               <td>Charlottesville</td>
@@ -347,25 +321,30 @@
           </table>
         </div>
       </div>
-      <div class="units-row">
-        <h1 class="h1" id="which"><i class="fa fa-asterisk fa-spin"></i> Which Alumni Become Entrepreneurs?</h1>
-<br>
-        <blockquote><p>29% of U.Va. alumni self-identify as entrepreneurial. This includes founders (19%), early employees (11%), board members (12%), and investors (7%).</p></blockquote>
-      <div class="unit-push-20 unit-60" id="which-alum-legends"></div>
+      <div class="units-row end">
+        <h1 class="h1" id="which">Which Alumni Become Entrepreneurs?</h1>
+        <br>
+        <blockquote>
+          <p>29% of U.Va. alumni self-identify as entrepreneurial. This includes founders (19%), early employees (11%), board members (12%), and investors (7%).</p>
+        </blockquote>
+        <div class="unit-push-20 unit-60" id="which-alum-legends"></div>
+
       </div>
-      <div class="units-row units-split">
+      <div class="units-row units-split end">
         <div class="unit-60" id="experience">
           <h3>Experience</h3>
         </div>
         <div class="unit-40" id="demog">
           <h3>Demographics</h3>
         </div>
-
       </div>
-      <div class="units-row">
+      <div class="units-row end" style="text-align:center">
+        <p class="chart-instruction"><i class="fa fa-asterisk fa-spin fa-2x"></i> Hover on the charts to see the percentages.</p>
+      </div>
+      <div class="units-row end">
         <div class="unit-100">
-          <blockquote>Entrepreneurial alumni were more likely to have had experience working for a business with fewer than 100 employees and to have friends and family members who were entrepreneurs.</blockquote>
           <p>16% of alumni entrepreneurs indicated having some involvement with entrepreneurship classes and programs while at the University (compared with 8% among non-entrepreneur respondents).While there is likely self-selection into such activities by those who are inclined to be entrepreneurs, the number is surprisingly high considering that entrepreneurship offerings at the University are a relatively recent phenomenon and that many alumni entrepreneurs graduated before any entrepreneurial courses were available.</p>
+          <blockquote>Entrepreneurial alumni were more likely to have had experience working for a business with fewer than 100 employees and to have friends and family members who were entrepreneurs.</blockquote>
         </div>
       </div>
       <div class="units-row">
@@ -376,22 +355,22 @@
 
         <div class="unit-50">
           <div class="units-row" id="degree">
-          <br>
+            <br>
           </div>
           <h2>Response Bias</h2>
           <p>About 45% of the living U.Va. alumni are women, but in our survey men and women are almost equally represented. The minority races/ethnicities are slightly underrepresented among the respondents. Asian, Black, and Hispanic alumni are respectively 4.1%, 4.1%, and 1.6% of the survey respondents; the numbers are respectively 6.5%, 5.4%, and 1.6% for all the living alumni who have reported race/ethnicity. </p>
-          <p>51% of the respondents had earned more than one postsecondary degree. Of all the degrees awarded at U.Va., less than 14% were in the field of business. Among the survey respondents, 18.7% had at least one degree in business (whether from U.Va. or elsewhere). While these two numbers are not directly comparable, it indicates the possibility that the alumni with business education are over-represented in the survey sample. Of all the degrees awarded at U.Va. since 1940, 79% were awarded in the period after 1980. For the survey respondents, 78% of the degrees were awarded during this period.</p>
-          <p>Data for the overall alumni population can be found <a href="http://www.virginia.edu/Facts/Glance_Alumni.html" target="_blank">here</a>.</p>
+          <p>51% of the respondents had earned more than one postsecondary degree. Of all the degrees awarded at U.Va., less than 14% were in the field of business. Among the survey respondents, 18.7% had at least one degree in business (whether from U.Va. or elsewhere). While these two numbers are not directly comparable, it indicates the possibility that the alumni with business education are over-represented in the survey sample. Of all the degrees awarded at U.Va. since 1940, 79% were awarded in the period after 1980. For the survey respondents, 78% of the degrees were awarded during this period. Data for the overall alumni population can be found <a href="http://www.virginia.edu/Facts/Glance_Alumni.html" target="_blank">here</a>.</p>
         </div>
       </div>
       <div class="units-row">
         <div class="unit-50">
           <h2>Regression Analysis</h2>
-          <p>A simple multivariate analysis provides insight into the relative sensitivity of entrepreneurial activity to demographic characteristics and experience. We find that females are 32% less likely than their male counterparts to be entrepreneurial while minorities are 61% more likely to be entrepreneurial. Those with business degrees (43%), professional, scientific, or technical work experience (19%), innovation experience (77%), exposure to family entrepreneurs (62%), small business work experience (125%), and those who were involved with U.Va. entrepreneurship programs (87%) are more likely to be entrepreneurial. Interestingly, we find that those with technical degrees (-18%) and doctorate degrees (-26%) are less likely to be entrepreneurial. We find no statistical evidence that out-of-state students or international students are more likely to be entrepreneurial.</p>
-        <a href="#!" id="show-modal" data-tools="modal" data-width="800" data-title="Regression Analysis" data-content="regression.html"><span class="label label-outline">More details</span></a>
+          <p>A simple multivariate analysis provides insight into the relative sensitivity of entrepreneurial activity to demographic characteristics and experience. We find that females are 32% less likely than their male counterparts to be entrepreneurial while minorities are 61% more likely to be entrepreneurial. Those with business degrees (43%), professional, scientific, or technical work experience (19%), innovation experience (77%), exposure to family entrepreneurs (62%), small business work experience (125%), and those who were involved with U.Va. entrepreneurship programs (87%) are more likely to be entrepreneurial. Interestingly, we find that those with technical degrees (-18%) and doctorate degrees (-26%) are less likely to be entrepreneurial. We find no statistical evidence that out-of-state students or international students are more likely to be entrepreneurial. <a href="#!" id="show-modal" data-tools="modal" data-width="800" data-title="Regression Analysis" data-content="regression.html"><span class="label label-outline">More details</span></a>
+          </p>
+
         </div>
         <div class="unit-50">
-        <br>
+          <br>
           <table class="table-flat table-stripped">
             <tr>
               <th>Independent Variable</th>
@@ -457,20 +436,19 @@
         </div>
       </div>
       <div class="units-row">
-        <div class="unit-50" id="age"><br></div>
-        <div class="unit-50">
+        <div class="unit-50" id="age">
           <h2>Age and Entrepreneurship</h2>
+        </div>
+        <div class="unit-50">
+          <br>
           <p>Many alumni pursue entrepreneurship at mid to late stages of their careers. The highest number of entrepreneurs in the survey were born in the mid-1950s suggesting an average age of approximately 60 at the time of the survey. This is despite a massive increase in the number of students and alumni starting in the early 1970s. Of course, entrepreneurial experience is cumulative and therefore will increase with age. However, if we look at the ratio of entrepreneurs to non-entrepreneurs by age, we see an increasing percentage of entrepreneurs as age increases, lending support to the notion that alumni are pursuing entrepreneurship later in their careers.</p>
-          <p><i class="fa fa-hand-o-left"></i> Hover on the chart for ratio.</p>
+          <p class="chart-instruction"><i class="fa fa-asterisk fa-spin fa-2x"></i> Hover on the chart for ratio.</p>
         </div>
       </div>
       <div class="units-row">
-        <h1 class="h1" id="what"><i class="fa fa-asterisk fa-spin"></i> What Type of Ventures Do U.Va. Alumni Create?</h1>
+        <h1 class="h1" id="what">What Type of Ventures Do U.Va. Alumni Create?</h1>
       </div>
 
-      <div class="units-row end">
-        <h2 style="text-align:center"><div id="decade-caption">All Ventures</div></h2>
-      </div>
       <div class="units-row units-split end">
         <div class="unit-40" id="ind">
           <h3 style="text-align:center">Top Sectors</h3>
@@ -482,21 +460,26 @@
           <h3 style="text-align:center">Status</h3>
         </div>
       </div>
-
+      <div class="units-row end">
+        <h2 style="text-align:center"><div id="decade-caption">All Ventures</div></h2>
+      </div>
       <div class="units-row units-split end">
         <div class="unit-50" id="decades">
           <h2>Number of Ventures by Decade</h2>
-          <p class="big">Click on a decade bar <i class="fa fa-hand-o-down"></i> to show summary numbers above for any decade. <a href="#!"><span id="show-total" class="label label-outline">Show All Ventures</span></a></p>
-        <p class="small">Data include ventures founded before 2013.</p>
+          <p class="chart-instruction"><i class="fa fa-asterisk fa-spin fa-2x"></i> Click on a decade bar to show summary numbers above for a single decade. <a href="#!"><span id="show-total" class="label label-outline">Show All Ventures</span></a>
+          </p>
+
         </div>
         <div class="unit-50">
-            <p>An increasing number of ventures have been founded in recent years—the single largest year being 2010.The ventures were distributed across a wide number of industry sectors. 19% classified themselves as professional, scientific or technical services—which could include businesses in information technology and life sciences. Among all the active businesses, 9.9% were pre-revenue, 19.7% were early revenue, 29.9% were in growth phase, and 31.5% indicated that they were mature businesses.</p>
+          <p>An increasing number of ventures have been founded in recent years—the single largest year being 2010.The ventures were distributed across a wide number of industry sectors. 19% classified themselves as professional, scientific or technical services—which could include businesses in information technology and life sciences. Among all the active businesses, 9.9% were pre-revenue, 19.7% were early revenue, 29.9% were in growth phase, and 31.5% indicated that they were mature businesses.</p>
 
-        <blockquote>The survival rate of U.Va. alumni ventures compares favorably to national averages, where approximately half of new firms survive more than five years and less than one-third survive more than ten years.</blockquote>
+          <blockquote>The survival rate of U.Va. alumni ventures compares favorably to national averages, where approximately half of new firms survive more than five years and less than one-third survive more than ten years.</blockquote>
+
+          <p class="small">Data include ventures founded before 2013.</p>
         </div>
       </div>
       <div class="units-row">
-        <h1 class="h1" id="how"><i class="fa fa-asterisk fa-spin"></i> How Do Entrepreneurial Alumni Contribute to the Economy?</h1>
+        <h1 class="h1" id="how">How Do Entrepreneurial Alumni Contribute to the Economy?</h1>
         <p>If our survey is a representative sample of all alumni, extrapolation would suggest that entrepreneurial U.Va. alumni have been directly involved, in the four different roles, with the creation of close to 65,000 ventures, approximately 38,000 of which are still active. If we consider only founders and exclude investors, board members, and early employees, U.Va. alumni have started 21,000 currently active firms, which is respectable compared with Stanford (39,900 active firms) and MIT (25,800 active firms). In Virginia, U.Va. alumni have created, in different roles, about 21,000 ventures (out of the 65,000 worldwide), and 13,000 of those are estimated to be currently in operation.</p>
         <a href="#!" id="show-modal" data-tools="modal" data-width="900" data-title="Extrapolation Methods" data-content="extrap_methods.html"><span class="label label-outline">Extrapolation Methods</span></a>
       </div>
@@ -559,15 +542,15 @@
           <h2>Distribution</h2>
           <p>Across the 8,979 ventures for which alumni provided data, ventures employed 75 people on average during the period of their greatest employment. At the top end of the distribution were five businesses employing 10,000 or more employees each. The vast majority of ventures employed less than ten people.</p>
           <p>Alumni ventures in our survey generated $36.8 million in annual worldwide revenues on average during their best year. 37 ventures generated over a billion dollars of revenue, with five organizations generating more than $8 billion in revenue. Other parameters exhibit similarly skewed distribution.</p>
-          <p class="big"><i class="fa fa-hand-o-right"></i> Each of the circles to the right and below represents a venture in our survey. Hover on a circle for the number associated with that venture.</p>
+          <p class="chart-instruction"><i class="fa fa-asterisk fa-spin fa-2x"></i> Each of the circles to the right and below represents a venture in our survey. Hover on a circle for the number associated with that venture.</p>
         </div>
         <div class="unit-60" id="emp-dist">
-        <br>
+          <br>
           <h3>Maximum Employment</h3>
         </div>
       </div>
       <div class="units-row end">
-      <div class="unit-100" id="contrib-legends"></div>
+        <div class="unit-100" id="contrib-legends"></div>
       </div>
       <div class="units-row end">
         <div class="unit-60" id="rev-dist">
@@ -583,9 +566,11 @@
           <h2>Attracting Entrepreneurs to Virginia</h2>
         </div>
         <div class="unit-30">
-        <br>
+          <br>
+          <br>
+          <br>
           <blockquote>22% of the Virginia ventures reported in the survey were started by alumni who had been out-of-state students at matriculation. Most of these alumni are from the Northeast.</blockquote>
-          <p><i class="fa fa-hand-o-left"></i> Hover on the map for the number of alumni from different states (as identified from the survey responses) who started ventures in Virginia.</p>
+          <p class="chart-instruction"><i class="fa fa-asterisk fa-spin fa-2x"></i> Hover on the map for the number of alumni from different states (as identified from the survey responses) who started ventures in Virginia.</p>
         </div>
       </div>
 
@@ -599,9 +584,9 @@
         </div>
         <div class="unit-70">
           <p class="last-para">Universities add value to their local community and broader region in a number of ways. The entrepreneurial efforts of university alumni are an important, yet often ignored, way in which universities help support the creation of jobs and economic growth. In some cases, alumni ventures grow directly out of the laboratories and research at the University and are reflected in reports on university licensing. In most cases, however, universities have no intellectual property claims on alumni ventures.</p>
+
           <p>Survey participants reported creating close to 9,000 ventures. Extrapolating from our survey sample to the population of U.Va. alumni as a whole suggests those numbers may be closer to 65,000 ventures, of which 38,000 are still active, employing 2.3 million people and generating $1.6 trillion in annual worldwide revenues.</p>
           <p>Within the Commonwealth of Virginia, entrepreneurial alumni reported creating nearly 3,000 ventures that employed over 90,000 people within the state. Extrapolated, Virginia ventures generated revenues of about $395 billion and 371,000 jobs. When one considers the $154 million annual expenditure by the Commonwealth on the University of Virginia, these numbers suggest a substantial return on investment from just entrepreneurial alumni of the University, even ignoring all other ways the University creates value.</p>
-
 
           <p>Of course, these individuals may have started ventures regardless of where, or even if, they received a college education. It is beyond our current analysis to resolve this possibility. However, it is interesting to note that much of the entrepreneurial activity of U.Va. alumni is concentrated within the Commonwealth. Given that the University of Virginia enrolls a sizable number of out-of-state students, the University may be acting as a talent attractor, bringing in high-performing students who are then more likely to remain and start ventures in the Commonwealth. It is further interesting to speculate how many Virginians would leave the state to attend college if they were not admitted to the University of Virginia. Once again, given the tendency for localization of ventures founded by entrepreneurial alumni, this retention may increase the overall number of start-ups within the state. </p>
 
@@ -618,8 +603,8 @@
     <div class="units-container units-padding">
       <footer>
         <br>
-        <p>Published in December 2014 by the  <a href="http://www.darden.virginia.edu/web/Batten-Institute/" target="_blank">Batten Institute</a> at the <a href="http://www.darden.virginia.edu/web/Home/" target="_blank">Darden School of Business</a>, 100 Darden Boulevard, Charlottesville, VA 22903.
-          <br>  <i class="fa fa-envelope-o"></i><a href="mailto:batten@darden.virginia.edu" style="text-decoration:none"> batten@darden.virginia.edu</a>
+        <p>Published in December 2014 by the <a href="http://www.darden.virginia.edu/web/Batten-Institute/" target="_blank">Batten Institute</a> at the <a href="http://www.darden.virginia.edu/web/Home/" target="_blank">Darden School of Business</a>, 100 Darden Boulevard, Charlottesville, VA 22903.
+          <br> <i class="fa fa-envelope-o"></i><a href="mailto:batten@darden.virginia.edu" style="text-decoration:none"> batten@darden.virginia.edu</a>
         </p>
 
         <p>©2014 The Darden School Foundation. All rights reserved.</p>
@@ -628,14 +613,34 @@
       </footer>
     </div>
     <svg height="0" width="0">
-    <defs>
-      <marker id="markerArrow" markerWidth="13" markerHeight="13" refx="5" refy="6" orient="auto">
-        <path d="M2,2 L2,11 L10,6 L2,2" style="fill: #000; opacity: 0.1" />
-      </marker>
-    </defs>
-  </svg>
+      <defs>
+        <marker id="markerArrow" markerWidth="13" markerHeight="13" refx="5" refy="6" orient="auto">
+          <path d="M2,2 L2,11 L10,6 L2,2" style="fill: #000; opacity: 0.1" />
+        </marker>
+      </defs>
+    </svg>
   </div>
-  <!-- TODO to minify -->
+  <!-- libraries star -->
+  <!-- Add fallback buttons and store files -->
+  <!-- TODO check if kube has dependency on 2.1.1 or if v1 works-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+  <script src="js/kube.min.js"></script>
+
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/d3.geo.projection.v0.min.js" charset="utf-8"></script>
+  <!-- TODO check if queue and topoojson used anywhere -->
+  <script src="http://d3js.org/queue.v1.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+  <!-- for share buttons -->
+  <!--  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+  window.jQuery || document.write('<script src="js/vendor/jquery.1.10.2.min.js"><\/script>')
+  </script>
+  <script src="js/rrssb.min.js"></script> -->
+  <!-- libraries end -->
+
+  <!-- TODO to minify js source files-->
   <script src="js/us_map.js "></script>
   <script src="js/global_map.js "></script>
   <script src="js/va_map.js "></script>
@@ -654,14 +659,7 @@
     }, 0);
   })
   </script>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
 </body>
 
 </html>

@@ -126,3 +126,12 @@ aside {
 .foot {
   background-color: #eaeff2;
 }
+
+.chart-instruction {
+  font-size: 17px;
+  color: #007681;
+}
+.table-header {
+  font-size: 18px;
+  color: #5b7f95;
+}

@@ -37,12 +37,7 @@ header {
 }
 .back-img {
   background-color: #eaeff2;
-  /*background: url("../img/frame.jpg");*/
-  background: url("../img/rotunda_sketch_angled.png");
-  /*background: url("../img/rotunda_angled_original.jpg");*/
-  /*background-size: 1200px 600px;*/
-  /*background-repeat: no-repeat;*/
-  /*margin-bottom: 10px;*/
+  background: url("../img/rotunda_sketch_angled.jpg");
 }
 #nav1 {
   margin-bottom: 0;

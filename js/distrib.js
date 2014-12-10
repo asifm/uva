@@ -2,8 +2,8 @@
 (function() {
   var draw_contrib;
   var colorScale = d3.scale.ordinal()
-  .domain(['Incorporated company', 'Partnership', 'Informal', 'Non-profit', 'Franchisee', 'Not reported', 'Sole proprietorship'])
-  .range(['steelblue', 'slateblue', 'firebrick', 'orangered', 'darkgreen', 'gray', 'darkseagreen']);
+    .domain(['Incorporated company', 'Partnership', 'Informal', 'Non-profit', 'Franchisee', 'Not reported', 'Sole proprietorship'])
+    .range(['steelblue', 'slateblue', 'firebrick', 'orangered', 'darkgreen', 'gray', 'darkseagreen']);
   draw_contrib = function(param) {
     var commaFormat, dataJson, nodes, pack, radScale, svg, tooltip;
     commaFormat = d3.format("0,000");
@@ -122,14 +122,7 @@
       idTarget: "#rev-dist",
       contData: revData
     });
-    // draw_contrib({
-    //   w: 600,
-    //   h: 600,
-    //   domainScale: [0, 12000000000],
-    //   rangeScale: [0, 50],
-    //   idTarget: "#exp",
-    //   contData: expData
-    // });
+
     draw_contrib({
       w: 400,
       h: 400,
@@ -138,16 +131,21 @@
       idTarget: "#cap-dist",
       contData: capData
     });
-    legend_data = ['Incorporated comp.', 'Non-profit', 'Partnership', 'Sole proprietorship', 'Franchisee', 'Informal', 'Not reported']
 
-    legends = d3.select("#contrib-legends").append("svg").attr("width", 1050).attr("height", 30).selectAll("g .legends").data(legend_data).enter().append("g").classed("legends", true).attr("transform", function(d, i) {
-      return "translate(" + (i * 150) + ", " + "0" + ")";
-    });
-    legends.append("rect").attr("x", 0).attr("y", 0).attr("width", 150).attr("height", 30).style("fill", function(d) {
+    legend_data = ['Incorporated company', 'Non-profit', 'Partnership', 'Sole proprietorship', 'Franchisee', 'Informal', 'Not reported']
+
+    legends = d3.select("#distrib-legends").append("svg")
+      .attr("width", 250).attr("height", 210)
+      .selectAll("g .legends")
+      .data(legend_data).enter().append("g").classed("legends", true)
+      .attr("transform", function(d, i) {
+        return "translate(0" + ", " + (i * 20) + ")";
+      });
+    legends.append("rect").attr("x", 200).attr("y", 0).attr("width", 50).attr("height", 17).style("fill", function(d) {
       return colorScale(d);
     });
-    legends.append("text").attr("text-anchor", "middle").attr("x", 75).attr("y", 15).attr("dy", ".3em")
-      .style("fill", "white")
+    legends.append("text").attr("text-anchor", "middle").attr("x", 100).attr("y", 10).attr("dy", ".3em")
+      .style("fill", "black")
       .text(function(d) {
         return d;
       });

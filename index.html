@@ -621,16 +621,25 @@
     </svg>
   </div>
   <!-- libraries star -->
-  <!-- Add fallback buttons and store files -->
-  <!-- TODO check if kube has dependency on 2.1.1 or if v1 works-->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-  <script src="js/kube.min.js"></script>
 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+  <script>
+  window.jQuery || document.write('<script src="js-lib/jquery-2.1.1.min.js"><\/script>')
+  </script>
+
+  <script src="js-lib/kube.min.js"></script>
+
+<!-- d3-files -->
   <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="http://d3js.org/d3.geo.projection.v0.min.js" charset="utf-8"></script>
-  <!-- TODO check if queue and topoojson used anywhere -->
-  <script src="http://d3js.org/queue.v1.min.js"></script>
+  <script>
+  window.d3 || document.write('<script src="js-lib/d3.min.js"><\/script>')
+  </script>
+
   <script src="http://d3js.org/topojson.v1.min.js"></script>
+  <script>
+  window.topojson || document.write('<script src="js-lib/topojson.v1.min.js"><\/script>')
+  </script>
+<!-- d3-files end -->
 
   <!-- for share buttons -->
   <!--  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -640,7 +649,7 @@
   <script src="js/rrssb.min.js"></script> -->
   <!-- libraries end -->
 
-  <!-- TODO to minify js source files-->
+  <!-- TODO minify js source files-->
   <script src="js/us_map.js "></script>
   <script src="js/global_map.js "></script>
   <script src="js/va_map.js "></script>

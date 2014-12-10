@@ -21,8 +21,8 @@ grayish light brown: cccc99*/
   header h2 {
     font-size: 30px !important;
   }
-
 }
+
 .units-container {
   max-width: 1100px !important;
   margin: 0 auto;
@@ -104,10 +104,7 @@ blockquote {
   font-family: "times new roman";
   font-family: "georgia";
   font-size: 20px;
-}
 
-aside {
-  /*font-size: 13px;*/
 }
 
 .align-right {
@@ -127,6 +124,6 @@ aside {
   color: #007681;
 }
 .table-header {
-  font-size: 18px;
-  color: #5b7f95;
+  font-size: 17px;
+  color: #235281;
 }

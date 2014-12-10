@@ -158,7 +158,11 @@
     }).on("click", function() {
       var decade = d3.select(this).datum().decade;
       drawDecade(decade);
-      d3.select("#decade-caption").html("Ventures Founded in " + decade);
+      d3.select("#decade-caption").html("Ventures Founded in " + decade)
+        .style("opacity", 0)
+        .transition()
+        .duration(600)
+        .style("opacity", 1);
     });
     barGroup.append("text").attr("class", "text-on-bar").attr("x", function(d) {
       return x(d.decade);
@@ -235,7 +239,11 @@
 
     d3.select("#show-total").on("click", function() {
       drawDecade('total');
-      d3.select("#decade-caption").html("All Ventures");
+      d3.select("#decade-caption").html("All Ventures")
+        .style("opacity", 0)
+        .transition()
+        .duration(600)
+        .style("opacity", 1);
     })
   });
 

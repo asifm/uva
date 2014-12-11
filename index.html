@@ -49,7 +49,7 @@
                 <div class="units-row end">
                     <div class="unit-100">
                         <h2 class="title2">A Case Study of the<br><b>University of Virginia</b></h2>
-                        <p> Findings from a survey of 22,757 U.Va. alumni.</p>
+                        <p> Findings from a survey of 22,757 U.Va. alumni</p>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
                     <!--  -->
-                    <div>
+                    <div style="padding:0px 0px 0px 10px">
                         <!-- social media share buttons start -->
                         <!-- twitter, linkedin, facebook, google plus, email -->
 
@@ -573,6 +573,7 @@
             <div class="units-row end">
                 <div class="unit-60" id="rev-dist">
                     <h3>Maximum Revenue Generated in a Year</h3>
+                    <p>&nbsp;</p>
                 </div>
                 <div class="unit-40" id="cap-dist">
                     <h3>Maximum Capital Raised in a Year</h3>
@@ -592,7 +593,6 @@
                 </div>
             </div>
 
-            <!-- conclusion -->
             <hr/>
             <div class="units-row">
                 <div class="unit-30">
@@ -613,7 +613,6 @@
                     <p>This research seeks to uncover one of the many ways that universities generate value for their students, their regional economic ecosystems, and the global business environment. Alumni have launched thousands of firms and created millions of jobs, which is only a fraction of the many ways that university students bring value to the world. Future research focused on understanding which attributes of the university experience help evolve students’ entrepreneurial prowess could provide useful insights for all educational institutions’ ability to cultivate new entrepreneurs.</p>
                 </div>
             </div>
-            <!-- conclusion ends -->
         </div>
 
 
@@ -661,17 +660,10 @@
     </script>
     <!-- d3-files end -->
 
-    <!-- minified js files -->
-    <script src="js/us_map.min.js"></script>
-    <script src="js/global_map.min.js"></script>
-    <script src="js/va_map.min.js"></script>
-    <script src="js/decade.min.js"></script>
-    <script src="js/which_alumni.min.js"></script>
-    <script src="js/which_alumni_age.min.js"></script>
-    <script src="js/distrib.min.js"></script>
-    <script src="js/extrap.min.js"></script>
-    <script src="js/outstate_va.min.js"></script>
-    <!-- end js -->
+    <!-- minified and concatenated js files -->
+    <script src="js/all-viz.js"></script>
+    <!--  -->
+
     <script>
     $(".top").click(function() {
         var position = $(document).scrollTop();

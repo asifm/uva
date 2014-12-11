@@ -31,27 +31,21 @@ var path = d3.geo.path()
 d3.json("data/us-states.json", function(json) {
     d3.csv("data/outstate_va.csv", function(data) {
         var data_len = data.length;
-      var json_len= json.features.length;
+        var json_len = json.features.length;
 
-      for (var i = 0; i < data_len; i++) {
-        for (var j = 0; j < json_len; j++) {
-          if (data[i].state == json.features[j].properties.name) {
-            json.features[j].properties.value = +data[i].value;
-          }
+        for (var i = 0; i < data_len; i++) {
+            for (var j = 0; j < json_len; j++) {
+                if (data[i].state == json.features[j].properties.name) {
+                    json.features[j].properties.value = +data[i].value;
+                }
+            }
         }
-      }
         svg.selectAll("line")
             .data(data)
             .enter()
             .append("line")
             .classed("outstate_line", true)
-            .attr("stroke", "orange")
-            .transition()
-            .delay(function(d, i) {
-                return i * 50
-            })
-            .duration(5000)
-            .ease("linear")
+            .style("opacity", "0.6")
             .attr("stroke-width", function(d) {
                 return wScale(d.value);
             })
@@ -67,34 +61,37 @@ d3.json("data/us-states.json", function(json) {
             .attr("y2", function(d) {
                 return projection(va_lon_lat)[1];
             })
+
+        svg.selectAll("path")
+            .data(json.features)
+            .enter()
+            .append("path")
+            .attr("d", path)
+            .classed("state", function(d) {
+                if (d.properties.name === "Virginia") {
+                    return false
+                } else {
+                    return true
+                }
+            })
+            .attr("fill", "steelblue")
+            .attr("stroke", "black")
+            .classed("oustate", true)
+            .on("mouseenter", function(d) {
+                if (d.properties.value) {
+                    name = d.properties.name;
+                    value = d.properties.value;
+                    tooltip.html(name + " <b>" + value + "</b>")
+                        .style("left", (d3.event.pageX - 15) + "px")
+                        .style("top", (d3.event.pageY + 50) + "px")
+                        .style("opacity", 1)
+                }
+            })
+            .on("mouseleave", function(d) {
+                tooltip
+                    .style("opacity", 0);
+            })
+
     });
-    svg.selectAll("path")
-        .data(json.features)
-        .enter()
-        .append("path")
-        .attr("d", path)
-        .classed("state", function(d) {
-            if (d.properties.name === "Virginia") {
-                return false
-            } else {
-                return true
-            }
-        })
-        .attr("fill", "steelblue")
-        .attr("stroke", "black")
-        .classed("oustate", true)
-        .on("mouseenter", function(d) {
-            if (d.properties.value) {
-                name = d.properties.name;
-                value = d.properties.value;
-                tooltip.html(name + " <b>" + value + "</b>")
-                    .style("left", (d3.event.pageX - 15) + "px")
-                    .style("top", (d3.event.pageY + 50) + "px")
-                    .style("opacity", 1)
-            }
-        })
-        .on("mouseleave", function(d) {
-            tooltip
-                .style("opacity", 0);
-        })
+
 });

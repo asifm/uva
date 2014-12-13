@@ -2,36 +2,57 @@
 <html>
 
 <head>
-    <Meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Economic Impact of Entrepreneurial Alumni</title>
 
-    <link rel="stylesheet" href="css/kube.min.css" />
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/kube_viz.css" />
+    <link rel="stylesheet" href="css/viz.css" />
 
-        <!-- libraries star -->
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--  -->
+
+
+    <!-- libraries star -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
-    <script>
+<!--     <script>
     window.jQuery || document.write('<script src="js-lib/jquery-2.1.1.min.js"><\/script>')
     </script>
-
+ -->
     <script src="js-lib/kube.min.js" defer></script>
 
     <!-- d3-files -->
     <script src="http://d3js.org/d3.v3.min.js" defer></script>
-    <script>
+<!--     <script>
     window.d3 || document.write('<script src="js-lib/d3.min.js"><\/script>')
     </script>
-
+ -->
     <script src="http://d3js.org/topojson.v1.min.js" defer></script>
-    <script>
+<!--     <script>
     window.topojson || document.write('<script src="js-lib/topojson.v1.min.js"><\/script>')
     </script>
-    <!-- d3-files end -->
+ -->    <!-- d3-files end -->
 
     <!-- minified and concatenated js files -->
     <script src="js/all-viz.js" defer></script>
     <!--  -->
+
+    <style>
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 50px!important
+        }
+        header h2 {
+            font-size: 30px!important
+        }
+    }
+    </style>
 </head>
 
 <body>
@@ -102,13 +123,7 @@
                         </ul>
                     </nav>
 
-                    <!--  -->
 
-                    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-                    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-                    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-                    <!--  -->
                     <div style="padding:0px 0px 0px 10px">
                         <!-- social media share buttons start -->
                         <!-- twitter, linkedin, facebook, google plus, email -->
@@ -136,7 +151,7 @@
                     <p class="first-para">Universities can be a significant engine for economic growth in their local communities and beyond. They are frequently large employers in their communities and large purchasers of goods and services. They often spend significantly on building and construction. Attracting grants from the federal government and other sources, they spend large amounts on research. This research in turn can lead to intellectual property, such as patents, that is licensed to established companies and entrepreneurial spinouts. Often, this encourage businesses to locate near the origin of that intellectual property. Last, but certainly not least, universities prepare and train students to participate in the workforce.</p>
                     <p>In this analysis, we focus on this last pathway by which universities help generate economic growth and create jobs. In particular, we examine–based on <a href="#!" id="show-modal" data-tools="modal" data-width="900" data-title="About the Survey" data-content="about_survey.html">a survey undertaken in 2013</a>–the entrepreneurial efforts of the alumni of the University of Virginia.</p>
                     <p>We define entrepreneurial alumni as those who founded new ventures, who are one of the first five employees of a new venture, who serve on the governing or advisory board of a new venture, or who provide capital to entrepreneurial ventures (e.g., angel investors and venture capitalists). Ventures include for-profit businesses as well as non-profit organizations.</p>
-                    <blockquote>Out of the 22,757 respondents to the survey, 6,564 indicated that they were entrepreneurial. These entrepreneurial alumni provided details on 8,979 ventures that they were involved in, suggesting an average of 1.37 ventures per alumni.</blockquote>
+                    <blockquote>Out of the 22,757 respondents to the survey, 6,564 indicated that they were entrepreneurial. These entrepreneurial alumni provided details on 8,979 ventures that they were involved in, suggesting an average of 1.37 ventures per alumnus.</blockquote>
                     <p>This is one of the most comprehensive surveys that we are aware of concerning entrepreneurial alumni at a major public university. U.Va. is ranked among the top 25 universities in the United States and has been ranked the first or second public university since U.S. News began ranking public universities. As a public university, U.Va. receives funding in part from the Commonwealth of Virginia ($154M in 2013 or 5.8% of the university’s total budget). One of the motivations of the state in investing in higher education is to help generate economic growth within the Commonwealth. This report provides evidence of the impact that alumni entrepreneurs have on economic growth and job creation both in the Commonwealth and beyond, and suggests the state is receiving a substantial return on investment from this avenue alone, even ignoring the numerous other ways the University creates value.</p>
 
                     <blockquote>
@@ -494,14 +509,14 @@
             </div>
 
             <div class="units-row units-split end">
-                <div class="unit-40" id="ind">
-                    <h3 style="text-align:center">Top Sectors</h3>
+                <div class="unit-40" id="ind" style="text-align:center">
+                    <h3>Top Sectors</h3>
                 </div>
-                <div class="unit-40" id="legal">
-                    <h3 style="text-align:center">Venture Structure</h3>
+                <div class="unit-40" id="legal" style="text-align:center">
+                    <h3>Venture Structure</h3>
                 </div>
-                <div class="unit-20" id="status">
-                    <h3 style="text-align:center">Status</h3>
+                <div class="unit-20" id="status" style="text-align:center">
+                    <h3>Status</h3>
                 </div>
             </div>
             <div class="units-row end">

@@ -21,9 +21,7 @@ grayish light brown: cccc99*/
   stroke: url(#gradient);
   stroke-width: 6;
 }
-. .center {
-  margin: 0 auto;
-}
+
 .decade_small_bar {
   fill: #5b7f95;
   opacity: 0.3;
